@@ -11,6 +11,15 @@ driconfig = "^0.2.0"
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"
 
+[tool.commitizen]
+name = "cz_conventional_commits"
+version = "0.1.0"
+tag_format = "v$version"
+version_files = [
+    "pyproject.toml:version",
+    "whatsappcloudapigateway/__init__.py:__version__"
+]
+
 [build-system]
 requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
