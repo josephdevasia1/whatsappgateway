@@ -13,8 +13,8 @@ app.config = Settings()
 
 
 class Metadata(BaseModel):
-    display_phone_number: str
-    phone_number_id: str
+    display_phone_number: int
+    phone_number_id: int
 
 
 class ChangeValue(BaseModel):
