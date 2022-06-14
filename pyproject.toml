@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "WhatsappCloudAPIGateway"
-version = "0.1.1"
+version = "0.1.2"
 description = ""
 authors = ["אהרן הורן <h98aaron@gmail.com>"]
 
@@ -14,7 +14,7 @@ pytest = "^5.2"
 
 [tool.commitizen]
 name = "cz_conventional_commits"
-version = "0.1.1"
+version = "0.1.2"
 tag_format = "v$version"
 version_files = [
     "pyproject.toml:version",
