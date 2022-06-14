@@ -6,7 +6,7 @@ from os.path import split
 
 class ConfigConfig(BaseSettings):
     path: str = "config.yaml"
-    env_prefix: str = "TM_"
+    env_prefix: str = "WG_"
 
     class Config:
         env_prefix = "CONFIG_"

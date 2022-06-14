@@ -8,6 +8,9 @@ authors = ["אהרן הורן <h98aaron@gmail.com>"]
 python = "^3.9"
 driconfig = "^0.2.0"
 uvicorn = "^0.17.6"
+aiohttp = "^3.8.1"
+fastapi = "^0.78.0"
+loguru = "^0.6.0"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"

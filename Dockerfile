@@ -25,4 +25,4 @@ COPY whatsappcloudapigateway whatsappcloudapigateway
 VOLUME "/data"
 EXPOSE 8080
 
-CMD ["uvicorn", "whatsappcloudapigateway.routes:app", "--port", "8080"]
+CMD ["uvicorn", "whatsappcloudapigateway.routes:app", "--port", "8080", "--host", "0.0.0.0"]
