@@ -1,3 +1,9 @@
 endpoints:
   default:
-    endpoint: ""
+    endpoint: "https://{metadata.phone_number_id}.wa.hooks.r0n.app/"
+  972542847677:
+    # delivery bot
+    endpoint: https://delivery.takeme.r0n.app/delivery
+  972524536763:
+    # default bot
+    endpoint: https://default.takeme.r0n.app/default 
