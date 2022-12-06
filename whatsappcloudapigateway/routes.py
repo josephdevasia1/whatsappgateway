@@ -56,7 +56,10 @@ async def post_message_updates(model: Model, config: Settings):
                     json=change.value.dict(),
                     headers=endpoint_config.headers,
                 ) as resp:
-                    logger.debug(resp.status)
+                    logger.bind(
+                        display_phone_number=change.value.metadata.display_phone_number,
+                        phone_number_id=change.value.metadata.phone_number_id
+                    ).debug(resp.status)
 
 
 @app.get("/")
