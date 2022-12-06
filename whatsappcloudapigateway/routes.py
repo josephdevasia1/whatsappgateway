@@ -51,16 +51,24 @@ async def post_message_updates(model: Model, config: Settings):
                 endpoint = endpoint_config.endpoint.format(
                     metadata=change.value.metadata,
                 )
-                async with http.post(
-                    endpoint,
-                    json=change.value.dict(),
-                    headers=endpoint_config.headers,
-                ) as resp:
+                try:
+                    async with http.post(
+                        endpoint,
+                        json=change.value.dict(),
+                        headers=endpoint_config.headers,
+                    ) as resp:
+                        logger.bind(
+                            display_phone_number=change.value.metadata.display_phone_number,
+                            phone_number_id=change.value.metadata.phone_number_id,
+                            endpoint=endpoint,
+                        ).debug(resp.status)
+                except Exception as e:
                     logger.bind(
                         display_phone_number=change.value.metadata.display_phone_number,
-                        phone_number_id=change.value.metadata.phone_number_id
-                    ).debug(resp.status)
-
+                        phone_number_id=change.value.metadata.phone_number_id,
+                        endpoint=endpoint,
+                        error=e,
+                    ).error("Error while sending message update")
 
 @app.get("/")
 def get(challenge: int = Query(..., alias="hub.challenge")):
