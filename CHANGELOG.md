@@ -1,3 +1,9 @@
+## v0.1.7 (2022-12-06)
+
+### Fix
+
+- endpoints config keys are strings
+
 ## v0.1.6 (2022-12-06)
 
 ### Fix
