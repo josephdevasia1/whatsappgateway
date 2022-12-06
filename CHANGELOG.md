@@ -1,3 +1,9 @@
+## v0.1.5 (2022-12-06)
+
+### Fix
+
+- Add some context for logs
+
 ## v0.1.4 (2022-06-14)
 
 ### Fix
