@@ -45,7 +45,7 @@ async def post_message_updates(model: Model, config: Settings):
         for entry in model.entry:
             for change in entry.changes:
                 endpoint_config = config.endpoints.get(
-                    change.value.metadata.display_phone_number,
+                    str(change.value.metadata.display_phone_number),
                     config.endpoints["default"],
                 )
                 endpoint = endpoint_config.endpoint.format(
